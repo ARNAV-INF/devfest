@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-container": "#fdc7cb",
+          "surface": "#fcf9f4",
+          "tertiary-container": "#7d9d84",
+          "on-secondary": "#ffffff",
+          "tertiary-fixed": "#c9ebcf",
+          "primary-container": "#7d9d85",
+          "outline": "#727972",
+          "on-secondary-container": "#795154",
+          "on-primary-container": "#173422",
+          "tertiary-fixed-dim": "#adcfb4",
+          "error": "#ba1a1a",
+          "inverse-on-surface": "#f3f0eb",
+          "on-secondary-fixed": "#301216",
+          "primary": "#476550",
+          "surface-container-high": "#ebe8e3",
+          "background": "#fcf9f4",
+          "surface-variant": "#e5e2dd",
+          "surface-container-low": "#f6f3ee",
+          "on-tertiary-fixed": "#032110",
+          "on-tertiary-container": "#163421",
+          "inverse-surface": "#31302d",
+          "error-container": "#ffdad6",
+          "on-error": "#ffffff",
+          "on-surface-variant": "#424843",
+          "secondary": "#7c5357",
+          "primary-fixed-dim": "#adcfb5",
+          "on-surface": "#1c1c19",
+          "on-primary-fixed-variant": "#304d39",
+          "surface-container": "#f0ede9",
+          "surface-bright": "#fcf9f4",
+          "secondary-fixed-dim": "#eeb9bd",
+          "on-primary": "#ffffff",
+          "inverse-primary": "#adcfb5",
+          "secondary-fixed": "#ffdadc",
+          "surface-container-lowest": "#ffffff",
+          "outline-variant": "#c2c8c1",
+          "tertiary": "#47654f",
+          "on-error-container": "#93000a",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-fixed-variant": "#304d39",
+          "on-secondary-fixed-variant": "#623c40",
+          "primary-fixed": "#c9ebd0",
+          "surface-tint": "#476550",
+          "on-background": "#1c1c19",
+          "surface-dim": "#dcdad5",
+          "surface-container-highest": "#e5e2dd",
+          "on-primary-fixed": "#032110"
+        },
+        "borderRadius": {
+          "DEFAULT": "1rem",
+          "lg": "2rem",
+          "xl": "3rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "1rem",
+          "space-md": "1.5rem",
+          "space-2xl": "4rem",
+          "margin-mobile": "1.25rem",
+          "margin-desktop": "3rem",
+          "gutter-desktop": "1.5rem",
+          "gutter-mobile": "1rem",
+          "space-xl": "3rem",
+          "space-3xs": "0.25rem",
+          "space-2xs": "0.5rem",
+          "space-lg": "2rem",
+          "space-xs": "0.75rem"
+        },
+        "fontFamily": {
+          "headline-2xl-mobile": ["Newsreader"],
+          "headline-xl": ["Newsreader"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-2xl": ["Newsreader"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "headline-sm": ["Newsreader"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-md": ["Newsreader"],
+          "headline-lg": ["Newsreader"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Newsreader"]
+        },
+        "fontSize": {
+          "headline-2xl-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400"}],
+          "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "400"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+          "headline-2xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+          "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400"}],
+          "headline-sm": ["18px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "500"}],
+          "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+          "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500"}],
+          "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+          "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+          "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400"}]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Mellow Brews Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1ViPz5s-ElRs5y59jbqwaRFid2onXTsCkl3ShKPh8WZu-BlPTh2ztOF1oJn5rNklC5lqIHlppbMK7AH9QEABqxh_mNuBgzsMMTIgItO6y0WyVq2D2BAPEMUgEfYNgZpxNRDcOPd7o6Xwr6Yt3way4RmoTzLrI5LmNcFMd0nVcsZsj7nRfzGnstv7qO9X_U1Rtlosg1XwRaDknBpM9mkhvc4QfS5D9KT0z3wNqbbbMvmYf-jxazLTc-cWr8"/><a class="font-headline-md text-headline-md text-on-surface tracking-tight hover:text-primary transition-colors" data-path="menu" href="#">Mellow Brews</a></div><nav class="hidden md:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-label-md text-label-md rounded-full px-space-xs py-space-2xs"><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-label-md text-label-md rounded-full px-space-xs py-space-2xs" data-path="menu" href="#">Menu</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors px-space-xs py-space-2xs" data-path="our-story" href="#">Our Story</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors px-space-xs py-space-2xs" data-path="atmosphere" href="#">Atmosphere</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors px-space-xs py-space-2xs" data-path="find-us" href="#">Find Us</a></nav><div class="flex items-center gap-space-xs"><a class="relative inline-flex items-center gap-space-2xs bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed hover:text-on-secondary-fixed px-space-sm py-space-2xs rounded-full transition-all duration-200 shadow-sm" data-path="cart" href="#"><span class="material-symbols-outlined text-[18px]">shopping_bag</span><span class="font-label-md text-label-md">Cart</span><span class="flex items-center justify-center bg-secondary text-on-secondary font-label-sm text-label-sm w-5 h-5 rounded-full">0</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Toast Notification Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-xs bg-inverse-surface text-inverse-on-surface px-space-md py-space-xs rounded-full shadow-xl" id="toast">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-message">Item added to your order</span>
+</div>
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-surface pb-space-2xl pt-space-lg">
+<!-- Ambient Botanical Backdrops -->
+<div class="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-24 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Featured Organic Badge -->
+<div class="inline-flex items-center gap-space-2xs bg-surface-container text-on-surface-variant px-space-sm py-space-3xs rounded-full w-fit shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">temp_preferences_custom</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-primary">100% Single Origin &amp; House-Made Botanicals</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h1 class="font-headline-2xl text-headline-2xl text-on-surface leading-tight tracking-tight">
+              Sip the serenity of <span class="italic font-normal text-primary">unhurried</span> craft.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+              A sunlit corner of artisanal pour-overs, botanical infusions, and slow-baked French viennoiserie crafted with gentle reverence for every morning ritual.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-2xs">
+<a class="inline-flex items-center gap-space-2xs bg-primary text-on-primary hover:bg-on-primary-container px-space-md py-space-xs rounded-full transition-all duration-200 transform hover:scale-[1.02] shadow-md" href="#featured-menu">
+<span class="font-label-lg text-label-lg">Explore Menu</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<button class="inline-flex items-center gap-space-2xs bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-space-xs rounded-full transition-colors" onclick="toggleCartDrawer(true)">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span class="font-label-lg text-label-lg">View Order (<span id="hero-cart-count">0</span>)</span>
+</button>
+</div>
+<!-- Quick Stats / Badges -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-md max-w-lg">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">4.9★</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Neighborhood rating</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">&lt; 3 min</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Careful brewing</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">100%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Compostable cups</span>
+</div>
+</div>
+</div>
+<!-- Hero Card Mosaic -->
+<div class="lg:col-span-5 relative mt-space-md lg:mt-0">
+<div class="relative w-full rounded-2xl overflow-hidden shadow-xl bg-surface-container-low group">
+<img alt="Honey Oat Cappuccino with latte art" class="w-full h-[440px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5E95pW2qFd52Czheaqbl7m7VSrh8hN0FSQtvZMaAG3QME8o8Yje8OmuoC0qssqkxAU5s3zTMpVz-8EGJ94bCnt30KjiPJfcXH5sbhfsFMB4PXsHrt5rb-WkGnHFJRBzZgWaOtye4XqVgRxyh98hvIMPIHHoZIIhj7d9y4Kov8FmAbaD0oc7FjREralRh-XPak40WGkUmIWVtxs8kLRxzllhURortJih1YsLE0zED8X0uR6CAH8WbG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent flex flex-col justify-end p-space-md text-surface">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim">Morning Highlight</span>
+<h3 class="font-headline-md text-headline-md text-surface font-normal">Honey Oat Cappuccino</h3>
+<p class="font-body-sm text-body-sm text-surface-container-low/90 max-w-xs">Wildflower honey &amp; double-shot espresso poured over micro-foamed oat milk.</p>
+</div>
+</div>
+<!-- Floating mini stamp -->
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-space-sm rounded-2xl shadow-xl hidden sm:flex items-center gap-space-xs max-w-xs">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">local_cafe</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Fresh Daily Roast</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Guatemala Santa Rosa</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Menu Section -->
+<section class="w-full py-space-2xl bg-surface" id="featured-menu">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-xs">
+<div>
+<div class="flex items-center gap-space-2xs text-primary font-label-sm text-label-sm uppercase tracking-widest">
+<span class="material-symbols-outlined text-[16px]">eco</span>
+<span>Mindfully Brewed &amp; Baked</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mt-space-3xs">Featured Seasonal Delights</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Each specialty beverage and pastry is prepared with organic grains, house-infused floral syrups, and uncompromised craftsmanship.
+        </p>
+</div>
+<!-- Menu Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- Product 1: Lavender Latte -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-2xl p-space-sm shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative w-full h-56 rounded-DEFAULT overflow-hidden bg-surface-container">
+<img alt="Lavender Latte" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2FAvvP8ic-jQ48kB0nxIb79gpKsp5kcpuq0ISMJAS6EH1Zq6yDGko2SBhwumK_qupTlYDFSzJNEk62jZzaFZj2yPXQPMi96Kliktv7wsEOajezOTl8EL_d1bDRheT8GDGIxkQ7Ly5fVJbjgRseZwmc2uHqvCl8qVp5oZVmU-jFQk5XcGX1lqGV-wd09oYTp0lrOgXXr_iSwP3Zp0tIBirabyY_HGtwHPrJ6aCsWLGXf3dUFRVmLiJ"/>
+<span class="absolute top-space-2xs left-space-2xs bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-xs py-space-3xs rounded-full shadow-sm">
+              House Favorite
+            </span>
+</div>
+<div class="flex flex-col flex-1 justify-between mt-space-sm">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Lavender Latte</h3>
+<span class="font-headline-sm text-headline-sm text-primary font-medium">$6.50</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-3xs">
+                Espresso, steamed oat milk, handcrafted organic culinary lavender syrup, velvety foam.
+              </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">spa</span> Floral &amp; Silky
+              </span>
+<button class="add-to-cart-btn inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-on-primary hover:bg-on-primary-container active:scale-95 transition-transform duration-150 shadow-sm" onclick="addToCart('lavender-latte', 'Lavender Latte', 6.50, 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2FAvvP8ic-jQ48kB0nxIb79gpKsp5kcpuq0ISMJAS6EH1Zq6yDGko2SBhwumK_qupTlYDFSzJNEk62jZzaFZj2yPXQPMi96Kliktv7wsEOajezOTl8EL_d1bDRheT8GDGIxkQ7Ly5fVJbjgRseZwmc2uHqvCl8qVp5oZVmU-jFQk5XcGX1lqGV-wd09oYTp0lrOgXXr_iSwP3Zp0tIBirabyY_HGtwHPrJ6aCsWLGXf3dUFRVmLiJ')" title="Add to Order">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2: Honey Oat Cappuccino -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-2xl p-space-sm shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative w-full h-56 rounded-DEFAULT overflow-hidden bg-surface-container">
+<img alt="Honey Oat Cappuccino" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5E95pW2qFd52Czheaqbl7m7VSrh8hN0FSQtvZMaAG3QME8o8Yje8OmuoC0qssqkxAU5s3zTMpVz-8EGJ94bCnt30KjiPJfcXH5sbhfsFMB4PXsHrt5rb-WkGnHFJRBzZgWaOtye4XqVgRxyh98hvIMPIHHoZIIhj7d9y4Kov8FmAbaD0oc7FjREralRh-XPak40WGkUmIWVtxs8kLRxzllhURortJih1YsLE0zED8X0uR6CAH8WbG"/>
+<span class="absolute top-space-2xs left-space-2xs bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-space-xs py-space-3xs rounded-full shadow-sm">
+              Seasonal Special
+            </span>
+</div>
+<div class="flex flex-col flex-1 justify-between mt-space-sm">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Honey Oat Cappuccino</h3>
+<span class="font-headline-sm text-headline-sm text-primary font-medium">$6.25</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-3xs">
+                Wildflower honey, slow-steamed minor figures oat milk, double shot espresso, cinnamon dust.
+              </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">local_fire_department</span> Cozy &amp; Warm
+              </span>
+<button class="add-to-cart-btn inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-on-primary hover:bg-on-primary-container active:scale-95 transition-transform duration-150 shadow-sm" onclick="addToCart('honey-oat-cappuccino', 'Honey Oat Cappuccino', 6.25, 'https://lh3.googleusercontent.com/aida-public/AB6AXuA5E95pW2qFd52Czheaqbl7m7VSrh8hN0FSQtvZMaAG3QME8o8Yje8OmuoC0qssqkxAU5s3zTMpVz-8EGJ94bCnt30KjiPJfcXH5sbhfsFMB4PXsHrt5rb-WkGnHFJRBzZgWaOtye4XqVgRxyh98hvIMPIHHoZIIhj7d9y4Kov8FmAbaD0oc7FjREralRh-XPak40WGkUmIWVtxs8kLRxzllhURortJih1YsLE0zED8X0uR6CAH8WbG')" title="Add to Order">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3: Matcha Cloud -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-2xl p-space-sm shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative w-full h-56 rounded-DEFAULT overflow-hidden bg-surface-container">
+<img alt="Matcha Cloud" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClzHJIJByS8rl7tU76mKx92u7SenPZGrJ614zgJ-z9kByTmZeV9jGVLbTCYYo22AVbA4D5tlGzsEmDSHsXUhAfGAGwwg3_j0VH3d_AgYBfbhpPHsi5rxssVMmDJMupcyteEXSfmbocjPZ-Z2RYdwoe1THfr8vAl6JqSP8m0_aVDSrzoYUzLWYpWyFN8GUYujy6OPONJW3tp5kNNd3eVd7b0wbu4xyE89Ff78F86pUB39P5O8Up5WFV"/>
+<span class="absolute top-space-2xs left-space-2xs bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-space-xs py-space-3xs rounded-full shadow-sm">
+              Cold Whisk
+            </span>
+</div>
+<div class="flex flex-col flex-1 justify-between mt-space-sm">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Matcha Cloud</h3>
+<span class="font-headline-sm text-headline-sm text-primary font-medium">$6.75</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-3xs">
+                Uji ceremonial matcha layered with cold vanilla cloud foam over ice and organic milk.
+              </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">psychology</span> Focus &amp; Calm
+              </span>
+<button class="add-to-cart-btn inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-on-primary hover:bg-on-primary-container active:scale-95 transition-transform duration-150 shadow-sm" onclick="addToCart('matcha-cloud', 'Matcha Cloud', 6.75, 'https://lh3.googleusercontent.com/aida-public/AB6AXuClzHJIJByS8rl7tU76mKx92u7SenPZGrJ614zgJ-z9kByTmZeV9jGVLbTCYYo22AVbA4D5tlGzsEmDSHsXUhAfGAGwwg3_j0VH3d_AgYBfbhpPHsi5rxssVMmDJMupcyteEXSfmbocjPZ-Z2RYdwoe1THfr8vAl6JqSP8m0_aVDSrzoYUzLWYpWyFN8GUYujy6OPONJW3tp5kNNd3eVd7b0wbu4xyE89Ff78F86pUB39P5O8Up5WFV')" title="Add to Order">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4: Vanilla Bean Croissant -->
+<div class="group relative flex flex-col bg-surface-container-low rounded-2xl p-space-sm shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative w-full h-56 rounded-DEFAULT overflow-hidden bg-surface-container">
+<img alt="Vanilla Bean Croissant" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPUG5O-sfjb5CMWgRpu2111k7ZjHyX6wFA7xN2Td1mvsF1fjALdj_7_Rmeaf2xr80zzz1-xdjpHY8LkD-RzvETXuSImokQIgBt9eKfhxz395vj2CfbX3mx7OtdZLCWBNYQXtiRyOmfx5mBn9YquilGApsGAFAJmOr647UTSLWJ77-iCDRRTacbV0gtVNQRtx1pYm4OxjwoBByPCMQaXXW_pgyE13ww0SN0gKeCPwrmBjfqhj3M6Pnq"/>
+<span class="absolute top-space-2xs left-space-2xs bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-xs py-space-3xs rounded-full shadow-sm">
+              Freshly Baked
+            </span>
+</div>
+<div class="flex flex-col flex-1 justify-between mt-space-sm">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Vanilla Bean Croissant</h3>
+<span class="font-headline-sm text-headline-sm text-primary font-medium">$5.50</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-3xs">
+                Slow-fermented French pastry folded with organic Madagascar vanilla glaze and cultured butter.
+              </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">bakery_dining</span> Crisp Flakes
+              </span>
+<button class="add-to-cart-btn inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-on-primary hover:bg-on-primary-container active:scale-95 transition-transform duration-150 shadow-sm" onclick="addToCart('vanilla-croissant', 'Vanilla Bean Croissant', 5.50, 'https://lh3.googleusercontent.com/aida-public/AB6AXuDPUG5O-sfjb5CMWgRpu2111k7ZjHyX6wFA7xN2Td1mvsF1fjALdj_7_Rmeaf2xr80zzz1-xdjpHY8LkD-RzvETXuSImokQIgBt9eKfhxz395vj2CfbX3mx7OtdZLCWBNYQXtiRyOmfx5mBn9YquilGApsGAFAJmOr647UTSLWJ77-iCDRRTacbV0gtVNQRtx1pYm4OxjwoBByPCMQaXXW_pgyE13ww0SN0gKeCPwrmBjfqhj3M6Pnq')" title="Add to Order">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About / Sanctuary Section -->
+<section class="w-full py-space-2xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Our Philosophy</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">A Sanctuary for Mindful Sips</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            In a rushed world, Mellow Brews was born out of a desire for stillness. We roast in modest micro-batches, steam non-dairy milks with soft precision, and cultivate an inviting atmosphere filled with leafy flora, natural linen, and warm acoustic warmth.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex items-start gap-space-2xs">
+<span class="material-symbols-outlined text-primary text-[24px]">chair</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Peaceful Seating</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Oak communal tables and sunlit nooks.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-2xs">
+<span class="material-symbols-outlined text-primary text-[24px]">nest_eco_leaf</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Organic Sourcing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct trade with ethical family farms.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-2xs">
+<span class="material-symbols-outlined text-primary text-[24px]">graphic_eq</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Acoustic Balance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gentle vinyl &amp; unhurried conversation.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-2xs">
+<span class="material-symbols-outlined text-primary text-[24px]">countertops</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Artisan Baristas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Attentive brewing with ceramic cups.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 gap-space-sm mt-space-md lg:mt-0">
+<div class="rounded-2xl overflow-hidden shadow-sm h-64 sm:h-80">
+<img alt="Cafe wooden table atmosphere" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5E95pW2qFd52Czheaqbl7m7VSrh8hN0FSQtvZMaAG3QME8o8Yje8OmuoC0qssqkxAU5s3zTMpVz-8EGJ94bCnt30KjiPJfcXH5sbhfsFMB4PXsHrt5rb-WkGnHFJRBzZgWaOtye4XqVgRxyh98hvIMPIHHoZIIhj7d9y4Kov8FmAbaD0oc7FjREralRh-XPak40WGkUmIWVtxs8kLRxzllhURortJih1YsLE0zED8X0uR6CAH8WbG"/>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-sm h-64 sm:h-80 mt-space-md">
+<img alt="Botanical beverage preparation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2FAvvP8ic-jQ48kB0nxIb79gpKsp5kcpuq0ISMJAS6EH1Zq6yDGko2SBhwumK_qupTlYDFSzJNEk62jZzaFZj2yPXQPMi96Kliktv7wsEOajezOTl8EL_d1bDRheT8GDGIxkQ7Ly5fVJbjgRseZwmc2uHqvCl8qVp5oZVmU-jFQk5XcGX1lqGV-wd09oYTp0lrOgXXr_iSwP3Zp0tIBirabyY_HGtwHPrJ6aCsWLGXf3dUFRVmLiJ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Slide-out Cart Drawer (Surface Level 3) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none" id="cart-drawer-backdrop" onclick="toggleCartDrawer(false)"></div>
+<aside class="fixed top-0 right-0 h-full w-full max-w-md bg-surface z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between" id="cart-drawer">
+<!-- Header -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-primary text-[24px]">shopping_bag</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Your Gathering Order</h3>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors" onclick="toggleCartDrawer(false)" title="Close Cart">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Items List -->
+<div class="flex-1 overflow-y-auto p-space-md flex flex-col gap-space-sm" id="cart-items-container">
+<!-- Items dynamically injected here -->
+<div class="flex flex-col items-center justify-center text-center py-space-2xl text-on-surface-variant" id="cart-empty-state">
+<span class="material-symbols-outlined text-outline text-[48px] mb-space-2xs">coffee_maker</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">Your cup is empty</p>
+<p class="font-body-sm text-body-sm mt-space-3xs max-w-xs">Select from our artisanal botanicals and single origin coffees to begin.</p>
+</div>
+</div>
+<!-- Footer / Summary -->
+<div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs" id="cart-footer">
+<div class="flex flex-col gap-space-3xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span>Subtotal</span>
+<span class="font-medium text-on-surface" id="cart-subtotal">$0.00</span>
+</div>
+<div class="flex justify-between">
+<span>Estimated Tax (8.5%)</span>
+<span class="font-medium text-on-surface" id="cart-tax">$0.00</span>
+</div>
+<div class="flex justify-between text-body-lg font-headline-sm text-headline-sm text-on-surface pt-space-3xs font-semibold">
+<span>Total</span>
+<span id="cart-total">$0.00</span>
+</div>
+</div>
+<button class="w-full mt-space-2xs bg-primary text-on-primary hover:bg-on-primary-container disabled:opacity-50 disabled:cursor-not-allowed font-label-lg text-label-lg py-space-xs rounded-full transition-all duration-200 shadow-md flex items-center justify-center gap-space-2xs" disabled="" id="btn-proceed-checkout" onclick="openCheckoutView()">
+<span>Proceed to Checkout</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</button>
+</div>
+</aside>
+<!-- Checkout Modal Dialog -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-space-sm" id="checkout-modal">
+<div class="bg-surface rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-space-md md:p-space-lg shadow-2xl relative flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Pickup Details</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Order Checkout</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors" onclick="closeCheckoutView()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-sm" id="checkout-form" onsubmit="handlePlaceOrder(event)">
+<!-- Customer Name -->
+<div class="flex flex-col gap-space-3xs">
+<label class="font-label-md text-label-md text-on-surface" for="cust-name">Your Full Name *</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-xs py-space-2xs rounded-DEFAULT placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="cust-name" placeholder="e.g. Jordan Miller" required="" type="text"/>
+</div>
+<!-- Table or Pickup Station -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-space-3xs">
+<label class="font-label-md text-label-md text-on-surface" for="service-type">Dining Mode</label>
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-xs py-space-2xs rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="service-type">
+<option value="pickup">Pickup at Counter</option>
+<option value="table">Table Service</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-3xs">
+<label class="font-label-md text-label-md text-on-surface" for="table-num">Table # / Notes</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-xs py-space-2xs rounded-DEFAULT placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="table-num" placeholder="Table 04 or 'Takeaway'" type="text"/>
+</div>
+</div>
+<!-- Barista Notes -->
+<div class="flex flex-col gap-space-3xs">
+<label class="font-label-md text-label-md text-on-surface" for="barista-notes">Special Requests (Optional)</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-xs py-space-2xs rounded-DEFAULT placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm resize-none" id="barista-notes" placeholder="e.g. Extra hot oat milk, cinnamon on the side" rows="2"></textarea>
+</div>
+<!-- Payment Selection (Pay at counter preselected) -->
+<div class="flex flex-col gap-space-2xs pt-space-2xs">
+<label class="font-label-md text-label-md text-on-surface">Payment Method</label>
+<div class="bg-primary-fixed/30 p-space-xs rounded-DEFAULT flex items-start gap-space-xs">
+<div class="w-5 h-5 mt-0.5 rounded-full bg-primary flex items-center justify-center text-on-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Pay at counter upon pickup</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Place your order now and pay via card, contactless, or cash when your beverage is ready.</p>
+</div>
+</div>
+</div>
+<!-- Total summary snippet -->
+<div class="bg-surface-container-low p-space-xs rounded-DEFAULT flex items-center justify-between text-body-md font-medium text-on-surface">
+<span>Amount Due:</span>
+<span class="font-headline-sm text-headline-sm text-primary" id="checkout-total-display">$0.00</span>
+</div>
+<!-- Confirm Button -->
+<div class="pt-space-xs flex items-center gap-space-xs">
+<button class="flex-1 bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md py-space-xs rounded-full transition-colors" onclick="closeCheckoutView()" type="button">
+            Back
+          </button>
+<button class="flex-2 w-full bg-primary text-on-primary hover:bg-on-primary-container font-label-lg text-label-lg py-space-xs rounded-full transition-all duration-200 shadow-md flex items-center justify-center gap-space-2xs" id="btn-confirm-order" type="submit">
+<span id="confirm-btn-label">Confirm Order</span>
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Live Order Preparation Tracker View (60-Second Tracker) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-md hidden items-center justify-center p-space-sm" id="tracker-modal">
+<div class="bg-surface rounded-2xl max-w-xl w-full p-space-md sm:p-space-lg shadow-2xl relative flex flex-col gap-space-md">
+<!-- Top Status Banner -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2xs">
+<span class="w-3 h-3 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Live Barista Tracker</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-space-xs py-space-3xs rounded-full text-on-surface-variant font-mono" id="order-id-badge">
+          Order #MB-842
+        </span>
+</div>
+<div class="text-center py-space-2xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface" id="tracker-main-heading">Preparing Your Brew</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-3xs" id="tracker-sub-heading">
+          Our baristas have received your order ticket and are calibrating the grind.
+        </p>
+</div>
+<!-- Animated Progress Dial / Bar -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center text-label-md font-label-md">
+<span class="text-primary font-bold" id="progress-percent">0% Completed</span>
+<span class="text-on-surface font-mono font-bold bg-surface-container-high px-space-xs py-space-3xs rounded-full" id="countdown-timer">60s remaining</span>
+</div>
+<div class="w-full bg-surface-container-highest h-3 rounded-full overflow-hidden relative">
+<div class="bg-primary h-full transition-all duration-1000 ease-linear rounded-full" id="tracker-progress-fill" style="width: 0%"></div>
+</div>
+</div>
+<!-- Step Milestones -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Milestone 1 -->
+<div class="step-card flex items-start gap-space-xs p-space-xs rounded-DEFAULT bg-primary-fixed/20 transition-all duration-300" id="step-1">
+<div class="step-icon w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</div>
+<div class="flex-1">
+<h4 class="step-title font-label-md text-label-md text-on-surface font-semibold">Order received by the barista</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Order ticket printed and ingredients verified at Counter 1.</p>
+</div>
+<span class="step-badge text-[11px] font-mono text-primary font-semibold">0:00 - 0:15</span>
+</div>
+<!-- Milestone 2 -->
+<div class="step-card flex items-start gap-space-xs p-space-xs rounded-DEFAULT bg-surface-container-low transition-all duration-300 opacity-60" id="step-2">
+<div class="step-icon w-8 h-8 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">coffee</span>
+</div>
+<div class="flex-1">
+<h4 class="step-title font-label-md text-label-md text-on-surface">Brewing your coffee with care</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Grinding fresh single-origin beans &amp; pulling golden espresso shots.</p>
+</div>
+<span class="step-badge text-[11px] font-mono text-outline font-semibold">0:15 - 0:40</span>
+</div>
+<!-- Milestone 3 -->
+<div class="step-card flex items-start gap-space-xs p-space-xs rounded-DEFAULT bg-surface-container-low transition-all duration-300 opacity-60" id="step-3">
+<div class="step-icon w-8 h-8 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">blender</span>
+</div>
+<div class="flex-1">
+<h4 class="step-title font-label-md text-label-md text-on-surface">Adding finishing touches</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Steaming velvety milk, infusing botanicals &amp; dusting spices.</p>
+</div>
+<span class="step-badge text-[11px] font-mono text-outline font-semibold">0:40 - 0:55</span>
+</div>
+<!-- Milestone 4 -->
+<div class="step-card flex items-start gap-space-xs p-space-xs rounded-DEFAULT bg-surface-container-low transition-all duration-300 opacity-60" id="step-4">
+<div class="step-icon w-8 h-8 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+<div class="flex-1">
+<h4 class="step-title font-label-md text-label-md text-on-surface">Ready for pickup at counter!</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fresh &amp; fragrant at Barista Station 1.</p>
+</div>
+<span class="step-badge text-[11px] font-mono text-outline font-semibold">0:55 - 1:00</span>
+</div>
+</div>
+<!-- Action Button after completion -->
+<div class="hidden pt-space-2xs flex flex-col gap-space-2xs text-center" id="tracker-completion-actions">
+<div class="p-space-xs bg-secondary-container/40 rounded-DEFAULT text-on-secondary-container font-body-sm text-body-sm">
+          Please present <strong class="font-semibold text-secondary">Order #MB-842</strong> to your barista. Enjoy your moment of calm!
+        </div>
+<button class="w-full bg-primary text-on-primary hover:bg-on-primary-container font-label-lg text-label-lg py-space-xs rounded-full transition-colors shadow-md" onclick="resetAndStartNewOrder()">
+          Start a New Order
+        </button>
+</div>
+</div>
+</div>
+<!-- Floating Sticky Action for Quick Access to Cart -->
+<button class="fixed bottom-6 left-6 z-40 bg-surface-container-lowest text-on-surface shadow-xl p-space-xs rounded-full flex items-center gap-space-2xs hover:bg-surface-container transition-all duration-200" id="floating-cart-btn" onclick="toggleCartDrawer(true)">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">local_cafe</span>
+</div>
+<div class="flex flex-col text-left pr-space-2xs">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Cart Status</span>
+<span class="font-body-sm text-body-sm text-primary" id="floating-cart-total">$0.00</span>
+</div>
+<span class="w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center" id="floating-cart-badge">0</span>
+</button>
+</div>
+<!-- Core Interactive Behavior -->
+<script>
+  // State Store
+  const state = {
+    cart: {},
+    isOrderLocked: false,
+    timerInterval: null,
+    totalSeconds: 60,
+    currentSecond: 0,
+    currentOrderId: 'MB-842'
+  };
+
+  // Cart Functions
+  function addToCart(id, name, price, image) {
+    if (state.isOrderLocked) {
+      showToast('An active order is in preparation. Please wait for completion.');
+      return;
+    }
+
+    if (!state.cart[id]) {
+      state.cart[id] = { id, name, price, image, quantity: 1 };
+    } else {
+      state.cart[id].quantity += 1;
+    }
+
+    showToast(`Added ${name} to your order!`);
+    renderCart();
+  }
+
+  function updateQuantity(id, delta) {
+    if (state.isOrderLocked) return;
+    if (!state.cart[id]) return;
+
+    state.cart[id].quantity += delta;
+    if (state.cart[id].quantity <= 0) {
+      delete state.cart[id];
+    }
+    renderCart();
+  }
+
+  function removeItem(id) {
+    if (state.isOrderLocked) return;
+    delete state.cart[id];
+    renderCart();
+  }
+
+  function calculateTotals() {
+    let subtotal = 0;
+    let totalItems = 0;
+
+    Object.values(state.cart).forEach(item => {
+      subtotal += item.price * item.quantity;
+      totalItems += item.quantity;
+    });
+
+    const tax = subtotal * 0.085;
+    const total = subtotal + tax;
+
+    return { subtotal, tax, total, totalItems };
+  }
+
+  function renderCart() {
+    const container = document.getElementById('cart-items-container');
+    const emptyState = document.getElementById('cart-empty-state');
+    const checkoutBtn = document.getElementById('btn-proceed-checkout');
+    const { subtotal, tax, total, totalItems } = calculateTotals();
+
+    // Update Badges
+    const navCartBadge = document.querySelector('header nav + div span.w-5');
+    if (navCartBadge) navCartBadge.textContent = totalItems;
+    
+    document.getElementById('floating-cart-badge').textContent = totalItems;
+    document.getElementById('hero-cart-count').textContent = totalItems;
+    document.getElementById('floating-cart-total').textContent = `$${total.toFixed(2)}`;
+
+    // Update Totals
+    document.getElementById('cart-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+    document.getElementById('cart-tax').textContent = `$${tax.toFixed(2)}`;
+    document.getElementById('cart-total').textContent = `$${total.toFixed(2)}`;
+    document.getElementById('checkout-total-display').textContent = `$${total.toFixed(2)}`;
+
+    // Clear previous rendered item rows
+    const oldCards = container.querySelectorAll('.cart-item-row');
+    oldCards.forEach(c => c.remove());
+
+    const items = Object.values(state.cart);
+    if (items.length === 0) {
+      emptyState.classList.remove('hidden');
+      checkoutBtn.disabled = true;
+    } else {
+      emptyState.classList.add('hidden');
+      checkoutBtn.disabled = false;
+
+      items.forEach(item => {
+        const itemRow = document.createElement('div');
+        itemRow.className = 'cart-item-row flex items-center justify-between p-space-xs rounded-DEFAULT bg-surface-container-low gap-space-2xs';
+        itemRow.innerHTML = `
+          <div class="flex items-center gap-space-2xs min-w-0">
+            <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-DEFAULT object-cover flex-shrink-0" />
+            <div class="min-w-0">
+              <h4 class="font-label-md text-label-md text-on-surface truncate">${item.name}</h4>
+              <span class="font-body-sm text-body-sm text-primary font-medium">$${(item.price * item.quantity).toFixed(2)}</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-3xs flex-shrink-0">
+            <button onclick="updateQuantity('${item.id}', -1)" class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-variant transition-colors text-on-surface">
+              <span class="material-symbols-outlined text-[16px]">remove</span>
+            </button>
+            <span class="font-label-md text-label-md text-on-surface px-1">${item.quantity}</span>
+            <button onclick="updateQuantity('${item.id}', 1)" class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-variant transition-colors text-on-surface">
+              <span class="material-symbols-outlined text-[16px]">add</span>
+            </button>
+            <button onclick="removeItem('${item.id}')" class="w-7 h-7 rounded-full text-outline hover:text-error flex items-center justify-center transition-colors ml-1" title="Remove item">
+              <span class="material-symbols-outlined text-[16px]">delete</span>
+            </button>
+          </div>
+        `;
+        container.appendChild(itemRow);
+      });
+    }
+  }
+
+  // Drawer Controls
+  function toggleCartDrawer(open) {
+    const drawer = document.getElementById('cart-drawer');
+    const backdrop = document.getElementById('cart-drawer-backdrop');
+
+    if (open) {
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      drawer.classList.remove('translate-x-full');
+    } else {
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      drawer.classList.add('translate-x-full');
+    }
+  }
+
+  // Bind Header Cart click event to open slide-out
+  document.addEventListener('DOMContentLoaded', () => {
+    const shellCartBtn = document.querySelector('header a[data-path="cart"]');
+    if (shellCartBtn) {
+      shellCartBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleCartDrawer(true);
+      });
+    }
+  });
+
+  // Checkout View
+  function openCheckoutView() {
+    toggleCartDrawer(false);
+    const modal = document.getElementById('checkout-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeCheckoutView() {
+    const modal = document.getElementById('checkout-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  // Order Placement & Lock State
+  function handlePlaceOrder(e) {
+    e.preventDefault();
+    const btn = document.getElementById('btn-confirm-order');
+    const label = document.getElementById('confirm-btn-label');
+
+    // Activate Application-wide lock guard
+    state.isOrderLocked = true;
+    btn.disabled = true;
+    label.textContent = "Locking & Dispatching...";
+
+    setTimeout(() => {
+      closeCheckoutView();
+      startLiveTracker();
+    }, 600);
+  }
+
+  // 60-Second Live Tracker
+  function startLiveTracker() {
+    const modal = document.getElementById('tracker-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+
+    state.currentOrderId = 'MB-' + Math.floor(100 + Math.random() * 900);
+    document.getElementById('order-id-badge').textContent = `Order #${state.currentOrderId}`;
+
+    state.currentSecond = 0;
+    state.totalSeconds = 60;
+    updateTrackerUI(0);
+
+    if (state.timerInterval) clearInterval(state.timerInterval);
+
+    state.timerInterval = setInterval(() => {
+      state.currentSecond++;
+      updateTrackerUI(state.currentSecond);
+
+      if (state.currentSecond >= state.totalSeconds) {
+        clearInterval(state.timerInterval);
+        completeTrackerState();
+      }
+    }, 1000);
+  }
+
+  function updateTrackerUI(second) {
+    const progressFill = document.getElementById('tracker-progress-fill');
+    const progressPercent = document.getElementById('progress-percent');
+    const countdownTimer = document.getElementById('countdown-timer');
+    const mainHeading = document.getElementById('tracker-main-heading');
+    const subHeading = document.getElementById('tracker-sub-heading');
+
+    const pct = Math.min(Math.round((second / 60) * 100), 100);
+    const rem = Math.max(60 - second, 0);
+
+    progressFill.style.width = `${pct}%`;
+    progressPercent.textContent = `${pct}% Completed`;
+    countdownTimer.textContent = `${rem}s remaining`;
+
+    const step1 = document.getElementById('step-1');
+    const step2 = document.getElementById('step-2');
+    const step3 = document.getElementById('step-3');
+    const step4 = document.getElementById('step-4');
+
+    const setActive = (card, isActive) => {
+      if (isActive) {
+        card.classList.remove('bg-surface-container-low', 'opacity-60');
+        card.classList.add('bg-primary-fixed/30', 'opacity-100');
+        card.querySelector('.step-icon').classList.replace('bg-surface-variant', 'bg-primary');
+        card.querySelector('.step-icon').classList.replace('text-on-surface-variant', 'text-on-primary');
+        card.querySelector('.step-title').classList.add('font-semibold');
+      } else {
+        card.classList.remove('bg-primary-fixed/30');
+        card.classList.add('bg-surface-container-low', 'opacity-60');
+        card.querySelector('.step-icon').classList.replace('bg-primary', 'bg-surface-variant');
+        card.querySelector('.step-icon').classList.replace('text-on-primary', 'text-on-surface-variant');
+        card.querySelector('.step-title').classList.remove('font-semibold');
+      }
+    };
+
+    if (second < 15) {
+      mainHeading.textContent = "Order Placed & Queued";
+      subHeading.textContent = "Barista has printed your order ticket at the brew bar.";
+      setActive(step1, true);
+      setActive(step2, false);
+      setActive(step3, false);
+      setActive(step4, false);
+    } else if (second < 40) {
+      mainHeading.textContent = "Grinding & Pulling Espresso";
+      subHeading.textContent = "Extracting balanced tasting notes using single-origin beans.";
+      setActive(step1, false);
+      setActive(step2, true);
+      setActive(step3, false);
+      setActive(step4, false);
+    } else if (second < 55) {
+      mainHeading.textContent = "Texturing & Garnish Infusion";
+      subHeading.textContent = "Steaming organic milk and layering hand-picked culinary botanicals.";
+      setActive(step1, false);
+      setActive(step2, false);
+      setActive(step3, true);
+      setActive(step4, false);
+    } else {
+      mainHeading.textContent = "Ready for Counter Pickup!";
+      subHeading.textContent = "Your beverages are waiting fresh and fragrant on Counter 1.";
+      setActive(step1, false);
+      setActive(step2, false);
+      setActive(step3, false);
+      setActive(step4, true);
+    }
+  }
+
+  function completeTrackerState() {
+    document.getElementById('countdown-timer').textContent = "Completed!";
+    document.getElementById('tracker-completion-actions').classList.remove('hidden');
+    showToast(`Order #${state.currentOrderId} is ready at the counter!`);
+  }
+
+  function resetAndStartNewOrder() {
+    // Reset state & unlock ordering
+    state.cart = {};
+    state.isOrderLocked = false;
+    renderCart();
+
+    // Reset modals
+    const trackerModal = document.getElementById('tracker-modal');
+    trackerModal.classList.add('hidden');
+    trackerModal.classList.remove('flex');
+    document.getElementById('tracker-completion-actions').classList.add('hidden');
+
+    const btnConfirm = document.getElementById('btn-confirm-order');
+    btnConfirm.disabled = false;
+    document.getElementById('confirm-btn-label').textContent = "Confirm Order";
+    document.getElementById('checkout-form').reset();
+
+    showToast('New order started. Welcome to Mellow Brews!');
+  }
+
+  // Toast Helper
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const label = document.getElementById('toast-message');
+    label.textContent = msg;
+
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    setTimeout(() => {
+      toast.classList.add('translate-y-20', 'opacity-0');
+    }, 2800);
+  }
+</script></main><footer class="w-full bg-surface-container-low"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop"><div class="md:col-span-4 flex flex-col gap-space-xs"><div class="flex items-center gap-space-2xs"><img alt="Mellow Brews Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1ViPz5s-ElRs5y59jbqwaRFid2onXTsCkl3ShKPh8WZu-BlPTh2ztOF1oJn5rNklC5lqIHlppbMK7AH9QEABqxh_mNuBgzsMMTIgItO6y0WyVq2D2BAPEMUgEfYNgZpxNRDcOPd7o6Xwr6Yt3way4RmoTzLrI5LmNcFMd0nVcsZsj7nRfzGnstv7qO9X_U1Rtlosg1XwRaDknBpM9mkhvc4QfS5D9KT0z3wNqbbbMvmYf-jxazLTc-cWr8"/><span class="font-headline-sm text-headline-sm text-on-surface">Mellow Brews</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">An unhurried sanctuary of seasonal single-origin roasts, gentle morning rituals, and botanical hearthside comfort.</p><div class="flex items-center gap-space-2xs mt-space-2xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">eco</span><span class="font-label-sm text-label-sm">100% Sustainably Sourced Beans</span></div></div><div class="md:col-span-3 flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Opening Hours</span><div class="flex flex-col gap-space-3xs text-on-surface-variant font-body-sm text-body-sm"><span>Monday – Friday: 7:00 am – 6:00 pm</span><span>Saturday &amp; Sunday: 8:00 am – 5:00 pm</span><span class="text-primary font-label-sm text-label-sm mt-space-3xs">Slow Brew Bar opens daily at 8:30 am</span></div></div><div class="md:col-span-2 flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Neighborhood Spot</span><div class="flex flex-col gap-space-3xs text-on-surface-variant font-body-sm text-body-sm"><span>412 Sagecrest Lane</span><span>Corner of Elm &amp; Third</span><span>Portland, OR 97201</span><a class="text-primary hover:text-on-surface font-label-sm text-label-sm mt-space-3xs transition-colors" data-path="find-us" href="#">View Map &amp; Directions →</a></div></div><div class="md:col-span-3 flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">The Morning Dispatch</span><p class="font-body-sm text-body-sm text-on-surface-variant">Receive seasonal tasting notes, roast drops, and intimate gathering invites.</p><form class="flex flex-col gap-space-2xs mt-space-3xs"><div class="relative"><input class="w-full bg-surface text-on-surface font-body-sm text-body-sm px-space-xs py-space-2xs rounded-DEFAULT placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Your email address" type="email"/><button class="mt-space-2xs w-full bg-primary text-on-primary hover:bg-on-primary-container font-label-md text-label-md py-space-2xs rounded-full transition-colors flex items-center justify-center gap-space-3xs" type="button"><span>Subscribe</span><span class="material-symbols-outlined text-[16px]">east</span></button></div></form></div></div><div class="mt-space-xl pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><p>© 2025 Mellow Brews Cafe &amp; Roastery. Crafted with calm.</p><div class="flex items-center gap-space-md font-label-sm text-label-sm"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Ritual</a><a class="hover:text-on-surface transition-colors" href="#">Accessibility</a></div></div></div></footer></body></html>
